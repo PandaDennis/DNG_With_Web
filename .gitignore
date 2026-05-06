@@ -1,28 +1,39 @@
-# --- 構建輸出 ---
-target/
-!.mvn/wrapper/maven-wrapper.jar
-build/
+### Gradle ###
 .gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
-# --- 日誌與暫存 ---
-*.log
-.sts4-cache/
-.springBeans/
-
-# --- IDE 設定 ---
+### IntelliJ IDEA ###
 .idea/
-*.iml
 *.iws
-.project
+*.iml
+*.ipr
+out/
+!**/src/main/resources/
+!**/src/test/resources/
+
+### Eclipse ###
 .settings/
+.project
 .classpath
 .factorypath
+bin/
+
+### Visual Studio Code ###
 .vscode/
 
-# --- OS 檔案 ---
+### Spring Boot ###
+*.log
+application-local.properties
+application-local.yml
+application-dev.properties
+application-dev.yml
+
+### Help files ###
+.helphtml/
+
+### OS Files ###
 .DS_Store
 Thumbs.db
 
-# --- 敏感設定 ---
-.env
-application-*.properties.local
