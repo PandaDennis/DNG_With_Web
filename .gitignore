@@ -1,18 +1,28 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# --- 構建輸出 ---
+target/
+!.mvn/wrapper/maven-wrapper.jar
+build/
+.gradle/
 
-# Other files and folders
+# --- 日誌與暫存 ---
+*.log
+.sts4-cache/
+.springBeans/
+
+# --- IDE 設定 ---
+.idea/
+*.iml
+*.iws
+.project
 .settings/
+.classpath
+.factorypath
+.vscode/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# --- OS 檔案 ---
+.DS_Store
+Thumbs.db
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# --- 敏感設定 ---
+.env
+application-*.properties.local
