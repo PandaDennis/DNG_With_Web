@@ -1,6 +1,10 @@
 package com.lab.pandadenden.dngLab.service;
 
-public interface DngService {
+import java.io.IOException;
+import java.io.InputStream;
 
-	public String showFileInfo();
+public interface DngService {
+	
+	
+	public String checkFileInfo(InputStream inputStream, String fileName) throws IOException;
 }
