@@ -28,7 +28,7 @@ public class DngLabController {
 	@PostMapping("/checkFileInfo")
 	String getSystemInfo(@RequestParam("file") MultipartFile[] files) throws IOException {
 		for(MultipartFile file :  files) {
-			dngService.checkFileInfo(file.getInputStream(),file.getOriginalFilename());
+		 	dngService.getFileInfo(file);
 		}
 		
 		return "Testing file check";
