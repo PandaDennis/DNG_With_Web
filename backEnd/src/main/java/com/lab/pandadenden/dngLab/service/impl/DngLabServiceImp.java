@@ -25,10 +25,15 @@ public class DngLabServiceImp implements DngService {
 		
 		 
 		try {		
-			FileDetailDto fileDetailDto = new FileDetailDto();
-			fileDetailDto.setFileType(dngLabFileUtil.checkFileType(file.getInputStream()));
-			fileDetailDto.setFileName(file.getOriginalFilename());
-			fileDetailDto.setCreateDateTime(new Date());
+//			FileDetailDto fileDetailDto = new FileDetailDto();
+//			fileDetailDto.setFileType(dngLabFileUtil.checkFileType(file.getInputStream()));
+//			fileDetailDto.setFileName(file.getOriginalFilename());
+//			fileDetailDto.setCreateDateTime(new Date());
+			
+			FileDetailDto fileDetailDto = FileDetailDto.fileDetailDtoBuilder()
+					.fileType(dngLabFileUtil.checkFileType(file.getInputStream()))
+					.fileName(file.getOriginalFilename())
+					.build();
 			logger.debug(fileDetailDto.toString());
 			return fileDetailDto;
 		} catch (IOException e) {
